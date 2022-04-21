@@ -1,0 +1,207 @@
+type: edu
+custom_name: stage2
+files:
+- name: build.gradle
+  visible: true
+  text: |-
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    group 'advisor'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'com.google.code.gson:gson:+'
+    }
+
+    jar {
+        manifest {
+            attributes 'Main-Class' : 'advisor.Main'
+        }
+        from {
+            configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        }
+    }
+  learner_created: false
+- name: src/advisor/Main.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+        }
+    }
+  learner_created: false
+- name: test/MusicAdvisorTest.java
+  visible: false
+  text: |
+    import org.hyperskill.hstest.stage.StageTest;
+    import org.hyperskill.hstest.testcase.CheckResult;
+    import org.hyperskill.hstest.testcase.TestCase;
+
+    import java.util.List;
+    import java.util.function.Function;
+
+    class Attach {
+        Function<String, CheckResult> func;
+
+        Attach(Function<String, CheckResult> func) {
+            this.func = func;
+        }
+    }
+
+    public class MusicAdvisorTest extends StageTest<Attach> {
+
+        @Override
+        public List<TestCase<Attach>> generate() {
+            return List.of(
+                new TestCase<Attach>()
+                    .setInput("auth\nexit")
+                    .setAttach(new Attach(reply -> {
+                        if (!reply.contains("---SUCCESS---")) {
+                            return new CheckResult(false,
+                                "There is no \"---SUCCESS---\" after \"auth\" but should be");
+                        }
+                        if (!reply.contains("https://accounts.spotify.com/authorize?")) {
+                            return new CheckResult(false,
+                                "There is no link after \"auth\" but should be");
+                        }
+    //                    if (reply.contains("a19ee7dbfda443b2a8150c9101bfd645")) {
+    //                        return new CheckResult(false,
+    //                                "You shouldn't use the client_id from the example!! " +
+    //                                        "You should create your own id on the spotify site.");
+    //                    }
+                        return CheckResult.correct();
+                    })),
+
+                new TestCase<Attach>()
+                    .setInput("new\nexit")
+                    .setAttach(new Attach(reply -> {
+                        if (!reply.strip().startsWith("Please, provide access for application.")) {
+                            return new CheckResult(false,
+                                "When no access provided you should output " +
+                                    "\"Please, provide access for application.\"");
+                        }
+                        return CheckResult.correct();
+                    })),
+
+                new TestCase<Attach>()
+                    .setInput("featured\nexit")
+                    .setAttach(new Attach(reply -> {
+                        if (!reply.strip().startsWith("Please, provide access for application.")) {
+                            return new CheckResult(false,
+                                "When no access provided you should output " +
+                                    "\"Please, provide access for application.\"");
+                        }
+                        return CheckResult.correct();
+                    })),
+
+                new TestCase<Attach>()
+                    .setInput("auth\nnew\nfeatured\nexit")
+                    .setAttach(new Attach(reply -> {
+                        if (!reply.contains("---NEW RELEASES---")) {
+                            return new CheckResult(false,
+                                "When \"new\" was inputted there should be \"---NEW RELEASES---\" line");
+                        }
+                        if (!reply.contains("---FEATURED---")) {
+                            return new CheckResult(false,
+                                "When \"featured\" was inputted there should be \"---FEATURED---\" line");
+                        }
+                        return CheckResult.correct();
+                    }))
+
+            );
+        }
+
+        @Override
+        public CheckResult check(String reply, Attach clue) {
+            return clue.func.apply(reply);
+        }
+    }
+  learner_created: false
+- name: src/advisor/Menu.java
+  visible: true
+  text: |
+    package advisor;
+
+    import java.util.HashMap;
+    import java.util.Map;
+    import java.util.Scanner;
+    import java.util.function.Consumer;
+
+    public class Menu implements Runnable {
+        private Map<String, Consumer<String[]>> actions = new HashMap<>();
+        private Scanner scanner = new Scanner(System.in);
+        private boolean runnable = true;
+        private Consumer<String[]> defaultAction = s -> System.out.println("Command not found");
+
+        public void run() {
+            while (runnable) {
+                System.out.print("> ");
+                var in = scanner.nextLine().split(" ");
+                if(in.length == 0) continue;
+                actions.getOrDefault(in[0], defaultAction)
+                        .accept(in);
+            }
+        }
+
+        public void exit() {
+            System.out.println("---GOODBYE!---");
+            runnable = false;
+        }
+
+        public void addOption(String option, Consumer<String[]> action) {
+            actions.put(option, action);
+        }
+
+    }
+  learner_created: true
+- name: src/advisor/TaskExecutor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class TaskExecutor {
+
+        public static void featured(String[] s) {
+            System.out.println("---FEATURED---\n" +
+                    "Mellow Morning\n" +
+                    "Wake Up and Smell the Coffee\n" +
+                    "Monday Motivation\n" +
+                    "Songs to Sing in the Shower");
+        }
+
+        public static void newTracks(String[] s) {
+            System.out.println("---NEW RELEASES---\n" +
+                    "Mountains [Sia, Diplo, Labrinth]\n" +
+                    "Runaway [Lil Peep]\n" +
+                    "The Greatest Show [Panic! At The Disco]\n" +
+                    "All Out Life [Slipknot]");
+        }
+
+        public static void categories(String[] s) {
+            System.out.println("---CATEGORIES---\n" +
+                    "Top Lists\n" +
+                    "Pop\n" +
+                    "Mood\n" +
+                    "Latin");
+        }
+
+        public static void playlists(String[] s) {
+            System.out.println("---MOOD PLAYLISTS---\n" +
+                    "Walk Like A Badass  \n" +
+                    "Rage Beats  \n" +
+                    "Arab Mood Booster  \n" +
+                    "Sunday Stroll");
+        }
+    }
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/5478#comment
+status: Unchecked
+record: -1

@@ -1,0 +1,3319 @@
+2022-04-12 17:05:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HITLER" не найдена
+Table "HITLER" not found; SQL statement:
+SELECT * FROM HITLER; [42102-200]
+2022-04-12 14:09:17 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-12 14:09:17 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-12 14:09:20 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-12 14:09:20 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-12 14:10:19 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-04-12 14:10:25 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-04-12 14:10:25 jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-04-12 14:10:36 jdbc[5]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:470)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-04-12 17:11:08 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Sources/Car Sharing/src/carsharing/db/carsharing.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Sources/Car Sharing/src/carsharing/db/carsharing.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Utils.getConnection(H2Utils.java:23)
+	at carsharing.CompanyDaoH2.getAllCompanies(CompanyDaoH2.java:20)
+	at carsharing.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/Sources/Car Sharing/src/carsharing/db/carsharing.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Sources/Car Sharing/src/carsharing/db/carsharing.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Sources/Car Sharing/src/carsharing/db/carsharing.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 21 more
+2022-04-12 17:11:18 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]"
+General error: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Utils.getConnection(H2Utils.java:23)
+	at carsharing.CompanyDaoH2.getAllCompanies(CompanyDaoH2.java:20)
+	at carsharing.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]"
+General error: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:741)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:396)
+	... 21 more
+2022-04-12 17:11:18 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Файл поврежден при чтении строки: null. Возможные решения: используйте утилиту восстановления (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:222)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:182)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Utils.getConnection(H2Utils.java:23)
+	at carsharing.CompanyDaoH2.getAllCompanies(CompanyDaoH2.java:20)
+	at carsharing.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Файл поврежден при чтении строки: null. Возможные решения: используйте утилиту восстановления (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 22 more
+Caused by: java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:741)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:396)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	... 19 more
+2022-04-12 17:11:46 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]"
+General error: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Utils.getConnection(H2Utils.java:23)
+	at carsharing.CompanyDaoH2.getAllCompanies(CompanyDaoH2.java:20)
+	at carsharing.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]"
+General error: "java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:741)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:396)
+	... 21 more
+2022-04-12 17:11:46 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Файл поврежден при чтении строки: null. Возможные решения: используйте утилиту восстановления (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:222)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:182)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at carsharing.H2Utils.getConnection(H2Utils.java:23)
+	at carsharing.CompanyDaoH2.getAllCompanies(CompanyDaoH2.java:20)
+	at carsharing.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Файл поврежден при чтении строки: null. Возможные решения: используйте утилиту восстановления (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 22 more
+Caused by: java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:741)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:396)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	... 19 more
+2022-04-12 17:19:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:20:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:20:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:20:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:20:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:21:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:42:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-12 17:44:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 18:21:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 21:46:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:00:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:01:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:02:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:02:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:03:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:03:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:03:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:03:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('PutMobil', 14); [42102-200]
+2022-04-13 22:03:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:04:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:04:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:05:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:07:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:08:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:08:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:08:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" не найдена
+Table "CAR" not found; SQL statement:
+SELECT * FROM CAR WHERE COMPANY_ID=14; [42102-200]
+2022-04-13 22:09:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                CONSTRAINT FOREIGN[*] KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            );"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                CONSTRAINT FOREIGN[*] KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            );"; expected "identifier"; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                CONSTRAINT FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42001-200]
+2022-04-13 19:11:35 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-13 19:11:35 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-13 19:11:37 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-13 19:11:37 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-13 19:11:42 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-13 19:11:42 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-13 19:11:44 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.message.DbException.convert(DbException.java:414)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:120)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3296)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:585)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:461)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	... 28 more
+2022-04-13 19:11:44 database: opening D:/Sources/Car Sharing/src/carsharing/db/carsharing
+org.h2.message.DbException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.get(DbException.java:216)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:166)
+	at org.h2.mvstore.db.Store.<init>(Store.java:140)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.intellij.database.remote.jdbc.helpers.JdbcHelperImpl.connect(JdbcHelperImpl.java:639)
+	at com.intellij.database.remote.jdbc.impl.RemoteDriverImpl.connect(RemoteDriverImpl.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "The write format 1 is smaller than the supported format 2 [2.1.210/5]"
+General error: "The write format 1 is smaller than the supported format 2 [2.1.210/5]" [50000-210]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	... 29 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.210/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4056)
+	at org.h2.mvstore.db.Store.<init>(Store.java:129)
+	... 26 more
+2022-04-13 22:16:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE CARCREATE TABLE[*] COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+);CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            );"
+Syntax error in SQL statement "DROP TABLE CARCREATE TABLE[*] COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+);CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            );"; SQL statement:
+DROP TABLE CARCREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+);CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42000-200]
+2022-04-13 22:16:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Невозможно удалить "COMPANY", пока существует зависимый объект "CONSTRAINT_103"
+Cannot drop "COMPANY" because "CONSTRAINT_103" depends on it; SQL statement:
+DROP TABLE COMPANY; [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.command.CommandList.update(CommandList.java:66)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at carsharing.H2Utils.createTables(H2Utils.java:34)
+	at carsharing.Main.main(Main.java:26)
+2022-04-13 22:34:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:40:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:47:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE company(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-13 22:49:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+DELETE FROM CAR; [42101-200]
+2022-04-13 23:52:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:20:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:20:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" не найдена
+Table "CUSTOMER" not found; SQL statement:
+INSERT INTO CUSTOMER (name) VALUES ('Dmitry'); [42102-200]
+2022-04-14 00:22:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "RENTER_CAR_ID" не найден
+Column "RENTER_CAR_ID" not found; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTER_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:216)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+2022-04-14 00:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "RENTER_CAR_ID" не найден
+Column "RENTER_CAR_ID" not found; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTER_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42122-200]
+2022-04-14 00:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:29:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:29:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:29:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 00:29:47 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 00:34:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:34:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:34:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 00:34:54 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 00:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:06:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:06:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:06:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:06:51 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:17:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:17:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:17:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:17:33 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:24:10 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:31:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:31:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:31:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:31:40 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:32:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CARS" не найдена
+Table "CARS" not found; SQL statement:
+SELECT * FROM CARS WHERE COMPANY_ID=4 AND ID NOT IN (SELECT RENTED_CAR_ID FROM CUSTOMER WHERE RENTED_CAR_ID!=NULL); [42102-200]
+2022-04-14 01:32:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:32:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:32:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:32:30 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:33:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:33:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:33:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:33:43 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 01:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 01:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 01:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:53)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 10:42:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 10:42:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 10:42:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 10:42:31 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:59)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:59)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 10:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-200]
+2022-04-14 10:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 10:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 10:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 10:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:71)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:71)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 11:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 11:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:10:30 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:71)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:71)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:43:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 11:43:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 11:43:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:43:13 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:80)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:80)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-14 11:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-14 11:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-14 11:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:80)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:80)
+	at carsharing.Main.main(Main.java:26)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-17 22:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-17 22:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:39:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-17 22:39:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-17 22:39:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:39:59 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-17 22:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-17 22:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:43:41 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:44:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('' SHIT IT 98;[*]', 4);"
+Syntax error in SQL statement "INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('' SHIT IT 98;[*]', 4);"; SQL statement:
+INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('' SHIT IT 98;', 4); [42000-200]
+2022-04-17 22:57:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-17 22:57:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-17 22:57:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:57:37 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 22:57:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO COMPANY (name) VALUES (''Puting;[*]');"
+Syntax error in SQL statement "INSERT INTO COMPANY (name) VALUES (''Puting;[*]');"; SQL statement:
+INSERT INTO COMPANY (name) VALUES (''Puting;'); [42000-200]
+2022-04-17 22:57:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('';[*]', 5);"
+Syntax error in SQL statement "INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('';[*]', 5);"; SQL statement:
+INSERT INTO CAR (NAME, COMPANY_ID) VALUES ('';', 5); [42000-200]
+2022-04-17 22:58:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO CUSTOMER (name) VALUES (''uff;[*]');"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (name) VALUES (''uff;[*]');"; SQL statement:
+INSERT INTO CUSTOMER (name) VALUES (''uff;'); [42000-200]
+2022-04-17 23:03:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-17 23:03:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-17 23:03:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-17 23:03:25 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:74)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 10:35:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 10:35:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 10:35:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 10:35:14 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 12:58:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 12:58:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 12:58:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 12:58:20 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 13:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 13:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:15:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 13:15:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 13:15:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:15:23 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:16:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 13:16:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 13:16:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:16:28 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:75)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:76)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:76)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:26:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+2022-04-18 13:26:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+2022-04-18 13:26:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
+2022-04-18 13:26:38 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:781)
+	at carsharing.H2Utils.createTables(H2Utils.java:76)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMPANY" уже существует
+Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY(
+    ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(128) NOT NULL UNIQUE
+); [42101-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:89)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:768)
+	at carsharing.H2Utils.createTables(H2Utils.java:76)
+	at carsharing.Main.main(Main.java:27)
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CAR" уже существует
+Table "CAR" already exists; SQL statement:
+CREATE TABLE CAR(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                COMPANY_ID INTEGER NOT NULL,
+                FOREIGN KEY (COMPANY_ID)
+                REFERENCES COMPANY(ID)
+            ); [42101-200]
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CUSTOMER" уже существует
+Table "CUSTOMER" already exists; SQL statement:
+CREATE TABLE CUSTOMER(
+                ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+                NAME VARCHAR(128) NOT NULL UNIQUE,
+                RENTED_CAR_ID INTEGER,
+                FOREIGN KEY (RENTED_CAR_ID)
+                REFERENCES CAR(ID)
+            ); [42101-200]
